@@ -11,8 +11,11 @@ interface RootLayoutProps {
   };
 }
 
-export default async function RootLayout({ children, params }: RootLayoutProps) {
+export default async function RootLayout(props: RootLayoutProps) {
+  const { children } = props;
+  const params = await props.params; // 👈 ключевой момент
   const { locale } = params;
+
   const messages = await getMessages({ locale });
 
   return (

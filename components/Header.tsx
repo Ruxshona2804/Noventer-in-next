@@ -46,6 +46,8 @@ const Header: React.FC = () => {
         <div className="relative  flex justify-center md:justify-end items-center">
           <Image
             src={hover}
+            width={500}
+            height={500}
             alt="Hover Background"
             className="absolute w-[110%]  md:w-full -z-10 top-[-20px]"
           />
@@ -54,6 +56,7 @@ const Header: React.FC = () => {
             alt="Computer"
             width={417}
             height={270}
+            priority={true}
             className="relative md:-left-50 left-3 bottom-23 md:-bottom-43 md:scale-220 md:w-full max-w-[500px]"
           />
         </div>

@@ -5,29 +5,10 @@ body{
 }
 :root{
  --violet:#5A00DB;
-
 }
 .container{
   width: 90%;
   max-width: 1440px;
   margin: 0 auto;
 }
-.section{
-  background: #0E041D;
-}
-.div{
 
-background: rgba(255, 255, 255, 0.05);
-border: 1px solid;
-
-border-image-source: radial-gradient(263.2% 1947.69% at 50% 50%, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-
-}
-.border-div{
-  border: 1px solid;
-
-border-image-source: radial-gradient(263.2% 1947.69% at 50% 50%, rgba(255, 255, 255, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
-
-
-}

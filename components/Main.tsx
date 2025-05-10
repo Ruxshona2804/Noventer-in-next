@@ -3,7 +3,7 @@ import main_image1 from "../public/pictures/main_image1.png";
 import main_image2 from "../public/pictures/main_image2.png";
 import main_image3 from "../public/pictures/main_image3.png";
 import hover from "../public/pictures/hover.svg";
-import { StaticImageData } from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { useTranslations } from "next-intl";
 
 
@@ -24,7 +24,7 @@ const Main: React.FC = () => {
     {
       img: main_image3,
       title: "Uzoq muddatli loyihalar",
-      text: "Tajribamiz davomida umumiy hisobda - - loyiha uchun -- - muddatda ishlab topshirdik",
+      text: "Tajribamiz davomida umumiy",
     },
     {
       img: main_image1,
@@ -48,10 +48,12 @@ const Main: React.FC = () => {
             key={index}
             className="bg-[rgba(255,255,255,0.1)] rounded-xl text-start overflow-hidden shadow-lg relative"
           >
-            <img
+            <Image
               className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]"
               src={hover}
-              alt="hover"
+              alt={card.title}
+              width={200}
+              height={200}
             />
             <img
               src={card.img.src}
