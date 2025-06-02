@@ -10,7 +10,7 @@ import icon8 from '../public/pictures/frame_pictures/icon8.svg';
 import icon9 from '../public/pictures/frame_pictures/icon9.svg';
 import { useTranslations } from "next-intl";
 
-// Tip uchun agar kerak bo‘lsa
+
 type Service = {
   title: string;
   desc: string;

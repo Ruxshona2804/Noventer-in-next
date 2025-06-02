@@ -1,15 +1,17 @@
+'use client';
 
 import React, { ChangeEvent } from 'react';
-import { usePathname, } from '@/i18n/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { useLocale } from 'next-intl';
-import { redirect } from 'next/navigation';
+
 const LangSwitch: React.FC = () => {
   const path = usePathname();
+  const router = useRouter();
   const locale = useLocale();
 
   const switchHandle = (e: ChangeEvent<HTMLSelectElement>) => {
     const selectedLocale = e.target.value;
-    redirect(`/${selectedLocale}${path}`);
+    router.push(`/${selectedLocale}${path}`);
   };
 
   return (
@@ -23,3 +25,4 @@ const LangSwitch: React.FC = () => {
 };
 
 export default LangSwitch;
+

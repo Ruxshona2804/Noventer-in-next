@@ -1,3 +1,4 @@
+// src/app/[locale]/layout.tsx
 import "@/../styles/globals.css";
 import { ReactNode } from "react";
 import { NextIntlClientProvider } from "next-intl";
@@ -11,11 +12,10 @@ interface RootLayoutProps {
   };
 }
 
-export default async function RootLayout(props: RootLayoutProps) {
-  const { children } = props;
-  const params = await props.params; // 👈 ключевой момент
+export default async function RootLayout({ children, params }: RootLayoutProps) {
   const { locale } = params;
 
+  // Получаем локализованные сообщения
   const messages = await getMessages({ locale });
 
   return (
