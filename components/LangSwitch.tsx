@@ -24,7 +24,7 @@ const LangSwitch: React.FC = () => {
     <div>
       <select onChange={switchHandle} value={currentLocale}>
         <option value="en">English</option>
-        <option value="uz">O&aposzbek</option>
+        <option value="uz">O&apos;zbek</option>
       </select>
     </div>
   );
