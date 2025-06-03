@@ -21,12 +21,16 @@ const LangSwitch: React.FC = () => {
   };
 
   return (
-    <div>
-      <select onChange={switchHandle} value={currentLocale}>
-        <option value="en">English</option>
-        <option value="uz">O&apos;zbek</option>
-      </select>
-    </div>
+    <div className="inline-block  rounded-md px-3 py-2">
+    <select
+      onChange={switchHandle}
+      value={currentLocale}
+      className="bg-transparent border-none outline-none text-base cursor-pointer"
+    >
+      <option value="en">English</option>
+      <option value="uz">O&apos;zbek</option>
+    </select>
+  </div>
   );
 };
 
