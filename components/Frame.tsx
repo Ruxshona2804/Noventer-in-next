@@ -1,15 +1,15 @@
 import React from "react";
-import icon1 from '../public/pictures/frame_pictures/icon1.svg';
-import icon2 from '../public/pictures/frame_pictures/icon2.svg';
-import icon3 from '../public/pictures/frame_pictures/icon3.svg';
-import icon4 from '../public/pictures/frame_pictures/icon4.svg';
-import icon5 from '../public/pictures/frame_pictures/icon5.svg';
-import icon6 from '../public/pictures/frame_pictures/icon6.svg';
-import icon7 from '../public/pictures/frame_pictures/icon.svg';
-import icon8 from '../public/pictures/frame_pictures/icon8.svg';
-import icon9 from '../public/pictures/frame_pictures/icon9.svg';
+import icon1 from "../public/pictures/frame_pictures/icon1.svg";
+import icon2 from "../public/pictures/frame_pictures/icon2.svg";
+import icon3 from "../public/pictures/frame_pictures/icon3.svg";
+import icon4 from "../public/pictures/frame_pictures/icon4.svg";
+import icon5 from "../public/pictures/frame_pictures/icon5.svg";
+import icon6 from "../public/pictures/frame_pictures/icon6.svg";
+import icon7 from "../public/pictures/frame_pictures/icon.svg";
+import icon8 from "../public/pictures/frame_pictures/icon8.svg";
+import icon9 from "../public/pictures/frame_pictures/icon9.svg";
 import { useTranslations } from "next-intl";
-
+import Image from "next/image";
 
 type Service = {
   title: string;
@@ -66,11 +66,15 @@ const services: Service[] = [
 ];
 
 const Frame: React.FC = () => {
-  const t = useTranslations()
+  const t = useTranslations();
   return (
     <div className="container mx-auto py-16 text-white">
-      <h2 className="text-center text-3xl md:text-4xl font-bold mb-6">{t("Xizmat turlari")}</h2>
-      <p className="text-center mb-12 text-gray-300">{t("Dasturiy ta'minotning eng talabgir xizmat turlari")}</p>
+      <h2 className="text-center text-3xl md:text-4xl font-bold mb-6">
+        {t("Xizmat turlari")}
+      </h2>
+      <p className="text-center mb-12 text-gray-300">
+        {t("Dasturiy ta'minotning eng talabgir xizmat turlari")}
+      </p>
 
       {/* Grid Layout */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -79,7 +83,14 @@ const Frame: React.FC = () => {
             key={index}
             className="p-6 bg-[rgba(255,255,255,0.1)] rounded-xl shadow-lg text-center hover:bg-[var(--violet)] px-10 py-20 hover:bg-opacity-80 hover:scale-105 transition"
           >
-            <img src={service.img} alt={service.title} className="mx-auto mb-4" />
+            <div className="mx-auto mb-4 w-16 h-16 relative">
+              <Image
+                src={service.img}
+                alt={service.title}
+                fill
+                className="object-contain"
+              />
+            </div>
             <h3 className="text-xl font-bold">{t(service.title)}</h3>
             <p className="text-gray-300 mt-2">{t(service.desc)}</p>
           </div>
@@ -90,4 +101,3 @@ const Frame: React.FC = () => {
 };
 
 export default Frame;
-

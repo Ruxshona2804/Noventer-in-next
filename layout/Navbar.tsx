@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 
           {/* Десктоп-меню */}
           <div className="hidden md:flex items-center justify-between w-full">
-            <Image src={logo} alt="Logo" width={140} height={50} />
+            <Image src={logo} alt="Logo"  className="object-contain w-[140px] h-auto" />
 
             <ul className="flex gap-10 text-base">
               <li>
