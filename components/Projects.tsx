@@ -4,6 +4,7 @@ import loyiha2 from "../public/pictures/loyiha2.png";
 import loyiha3 from "../public/pictures/loyiha3.png";
 import hover from "../public/pictures/hover.svg";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Projects: React.FC = () => {
   const t =  useTranslations()
@@ -18,33 +19,26 @@ const Projects: React.FC = () => {
         {/* Project 1 */}
         <div className="projects flex flex-col md:flex-row items-center gap-5 md:gap-10 rounded-2xl relative">
           <div className="w-full md:w-[50%]">
-            <img className="rounded-[16px] w-[360px] h-[340px] md:w-full" src={loyiha1.src as string} alt="loyiha" />
+            
+            <Image src={loyiha1.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
-            <img
-              className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]"
-              src={hover.src as string}
-              alt="hover"
-            />
+            <Image src={hover.src as string} alt="hover" className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("Tourmad loyihasi")}</h3>
             <p className="md:text-[18px] text-[14px] text-start">
               {t("Tourmad")}
             </p>
             <button className="px-4 py-2 text-white border rounded-lg block bg-white/10 shadow-lg mt-5">
-              {t("Loyihani ko’rish")}
+              {t("Loyihani ko'rish")}
             </button>
           </div>
         </div>
 
         {/* Project 2 */}
         <div className="projects flex flex-col md:flex-row-reverse items-center gap-5 md:gap-10 rounded-2xl relative">
-          <img
-            className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]"
-            src={hover.src as string}
-            alt="hover"
-          />
+          <Image src={hover as string} alt="loyiha" className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
           <div className="w-full md:w-[50%]">
-            <img className="rounded-[16px] w-[360px] h-[340px] md:w-full" src={loyiha2.src as string} alt="loyiha" />
+            <Image src={loyiha2.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("ProRun loyihasi")}</h3>
@@ -52,7 +46,7 @@ const Projects: React.FC = () => {
               {t("Prorun")}
             </p>
             <button className="px-4 py-2 text-white border rounded-lg block bg-white/10 shadow-lg mt-5">
-            {t("Loyihani ko’rish")}
+            {t("Loyihani ko'rish")}
             </button>
           </div>
         </div>
@@ -60,15 +54,15 @@ const Projects: React.FC = () => {
         {/* Project 3 */}
         <div className="projects flex flex-col md:flex-row items-center gap-5 md:gap-10 rounded-2xl relative">
           <div className="w-full md:w-[50%]">
-            <img className="rounded-[16px] w-[360px] h-[340px] md:w-full" src={loyiha3.src as string} alt="loyiha" />
+            <Image src={loyiha3.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("Xalq trans loyihasi")}</h3>
             <p className="md:text-[18px] text-[14px] text-start">
-              {t("ko’proq ma’lumotlar")}
+              {t("ko'proq ma'lumotlar")}
             </p>
             <button className="px-4 py-2 text-white border rounded-lg block bg-white/10 shadow-lg mt-5">
-            {t("Loyihani ko’rish")}
+            {t("Loyihani ko'rish")}
             </button>
           </div>
         </div>
@@ -77,7 +71,7 @@ const Projects: React.FC = () => {
       {/* Bottom Button */}
       <div>
         <button className="bg-[var(--violet)]  py-3 px-6 rounded-lg mt-10 block mx-auto">
-          {t("Boshqa loyihalarni ko’rish")}
+          {t("Boshqa loyihalarni ko'rish")}
         </button>
       </div>
     </div>

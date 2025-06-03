@@ -55,11 +55,10 @@ const Main: React.FC = () => {
               width={200}
               height={200}
             />
-            <img
-              src={card.img.src}
-              alt={card.title}
-              className="w-full h-[70%] object-cover"
-            />
+            
+            <Image src={card.img.src} alt={card.title} className="w-full h-[70%] object-cover" />
+           
+            
 
             <div className="p-6">
               <h3 className="text-xl font-semibold mb-2">{t(card.title)}</h3>
@@ -73,7 +72,7 @@ const Main: React.FC = () => {
 
       {/* Текст внизу */}
       <p className=" py-8  text-gray-300 text-sm text-[18px]  text-center md:text-start container mx-auto">
-       {t("ma’lumotlar")} 
+       {t("ma'lumotlar")} 
          <br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
       </p>
     </section>

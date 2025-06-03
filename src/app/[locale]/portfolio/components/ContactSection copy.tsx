@@ -57,7 +57,7 @@ const ContactSection: React.FC = () => {
             className="w-full p-3 bg-gray-800 rounded-xl text-white placeholder-gray-400 mb-6 focus:outline-none focus:ring-2 focus:ring-violet-500"
           />
           <button className="w-full bg-violet-600 hover:bg-violet-700 text-white font-semibold py-3 rounded-xl transition">
-            {t("Jo’natish")}
+            {t("Jo'natish")}
           </button>
         </div>
       </div>
