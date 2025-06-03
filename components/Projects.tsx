@@ -20,10 +20,10 @@ const Projects: React.FC = () => {
         <div className="projects flex flex-col md:flex-row items-center gap-5 md:gap-10 rounded-2xl relative">
           <div className="w-full md:w-[50%]">
             
-            <Image src={loyiha1.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
+            <Image src={loyiha1.src as string} alt="loyiha" width={360} height={340} className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
-            <Image src={hover.src as string} alt="hover" className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
+            <Image src={hover.src as string} alt="hover" width={360} height={340} className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("Tourmad loyihasi")}</h3>
             <p className="md:text-[18px] text-[14px] text-start">
               {t("Tourmad")}
@@ -36,9 +36,9 @@ const Projects: React.FC = () => {
 
         {/* Project 2 */}
         <div className="projects flex flex-col md:flex-row-reverse items-center gap-5 md:gap-10 rounded-2xl relative">
-          <Image src={hover as string} alt="loyiha" className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
+          <Image src={hover as string} alt="loyiha" width={360} height={340} className="absolute w-[50%] md:w-[50%] h-auto object-contain z-[-1]" />
           <div className="w-full md:w-[50%]">
-            <Image src={loyiha2.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
+            <Image src={loyiha2.src as string} alt="loyiha" width={360} height={340} className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("ProRun loyihasi")}</h3>
@@ -54,7 +54,7 @@ const Projects: React.FC = () => {
         {/* Project 3 */}
         <div className="projects flex flex-col md:flex-row items-center gap-5 md:gap-10 rounded-2xl relative">
           <div className="w-full md:w-[50%]">
-            <Image src={loyiha3.src as string} alt="loyiha" className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
+            <Image src={loyiha3.src as string} alt="loyiha" width={360}  height={340} className="rounded-[16px] w-[360px] h-[340px] md:w-full" />
           </div>
           <div className="w-full md:w-[50%] text-center md:text-left">
             <h3 className="font-bold text-[24px] md:mb-4 text-start">{t("Xalq trans loyihasi")}</h3>

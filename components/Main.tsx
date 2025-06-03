@@ -38,7 +38,7 @@ const Main: React.FC = () => {
       {/* Заголовок */}
       <div className="bg-[var(--violet)] py-7 mb-9 text-start  ">
         <h2 className=" container text-[48px] font-bold">{t("Biz haqimizda")}</h2>
-        <p className="text-gray-300 text-[18px] container  text-start ">{t("Qisqacha ma'lumot")}</p>
+        <p className="text-gray-300 text-[18px] container  text-start ">{t("Qisqacha ma&aposlumot")}</p>
       </div>
 
       {/* Карточки */}
@@ -56,7 +56,7 @@ const Main: React.FC = () => {
               height={200}
             />
             
-            <Image src={card.img.src} alt={card.title} className="w-full h-[70%] object-cover" />
+            <Image src={card.img.src} alt={card.title} width={500} height={700} className="w-full h-[70%] object-cover" />
            
             
 
@@ -72,8 +72,8 @@ const Main: React.FC = () => {
 
       {/* Текст внизу */}
       <p className=" py-8  text-gray-300 text-sm text-[18px]  text-center md:text-start container mx-auto">
-       {t("ma'lumotlar")} 
-         <br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+       {t("ma&aposlumotlar")} 
+         <br /> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&aposs standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
       </p>
     </section>
   );
