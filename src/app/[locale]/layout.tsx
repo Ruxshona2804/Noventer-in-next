@@ -13,7 +13,7 @@ interface RootLayoutProps {
 }
 
 export default async function RootLayout({ children, params }: RootLayoutProps) {
-  // Используем await, чтобы получить параметры
+
   const { locale } = await params;
 
   // Получаем локализованные сообщения
